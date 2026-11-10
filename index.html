@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shreepriya Gopal - Product Manager</title>
+    <!-- Tailwind CSS for rapid, responsive styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter to mimic San Francisco -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', 'sans-serif'],
+                    },
+                    colors: {
+                        apple: {
+                            text: '#1d1d1f',
+                            subtext: '#86868b',
+                            bg: '#f5f5f7',
+                            card: '#ffffff',
+                            link: '#06c'
+                        }
+                    },
+                    letterSpacing: {
+                        tightest: '-.04em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f5f5f7;
+            color: #1d1d1f;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        /* Glassmorphism utility */
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: saturate(180%) blur(20px);
+            -webkit-backdrop-filter: saturate(180%) blur(20px);
+        }
+
+        /* Scroll Animation Classes */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .fade-in-up.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Delay utilities for staggered animations */
+        .delay-100 { transition-delay: 100ms; }
+        .delay-200 { transition-delay: 200ms; }
+        .delay-300 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="antialiased selection:bg-black selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-gray-200/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-14 text-xs font-medium text-apple-text/80">
+                <a href="#" class="hover:text-black transition-colors">SG.</a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#experience" class="hover:text-black transition-colors">Experience</a>
+                    <a href="#skills" class="hover:text-black transition-colors">Skills</a>
+                    <a href="#education" class="hover:text-black transition-colors">Education</a>
+                    <a href="#achievements" class="hover:text-black transition-colors">Achievements</a>
+                    <a href="#contact" class="hover:text-black transition-colors">Contact</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-apple-text focus:outline-none">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-sm font-medium text-apple-text text-center">
+                <a href="#experience" class="block px-3 py-2 hover:bg-gray-50 rounded-lg mobile-link">Experience</a>
+                <a href="#skills" class="block px-3 py-2 hover:bg-gray-50 rounded-lg mobile-link">Skills</a>
+                <a href="#education" class="block px-3 py-2 hover:bg-gray-50 rounded-lg mobile-link">Education</a>
+                <a href="#achievements" class="block px-3 py-2 hover:bg-gray-50 rounded-lg mobile-link">Achievements</a>
+                <a href="#contact" class="block px-3 py-2 hover:bg-gray-50 rounded-lg mobile-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="min-h-screen flex flex-col items-center justify-center pt-16 px-4 text-center relative overflow-hidden">
+        <!-- Abstract subtle background element -->
+        <div class="absolute inset-0 z-0 flex items-center justify-center opacity-30 pointer-events-none">
+            <div class="w-[800px] h-[800px] bg-gradient-to-tr from-gray-200 to-gray-50 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div class="relative z-10 w-full max-w-4xl mx-auto flex flex-col items-center">
+            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold tracking-tightest text-apple-text mb-4 fade-in-up">
+                Shreepriya Gopal.
+            </h1>
+            <p class="text-xl md:text-3xl font-medium text-apple-subtext tracking-tight mb-12 fade-in-up delay-100 max-w-2xl">
+                Product Manager. Strategist. Innovator.
+            </p>
+            <div class="fade-in-up delay-200">
+                <a href="Shreepriya_Gopal_PM.pdf" download="Shreepriya_Gopal_PM.pdf" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-sm md:text-base font-semibold text-white bg-black rounded-full hover:scale-105 hover:bg-gray-900 transition-all duration-300 shadow-lg shadow-black/20 focus:outline-none focus:ring-4 focus:ring-gray-200">
+                    Download Resume
+                    <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="w-full">
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-apple-text mb-4">Experience</h2>
+                    <p class="text-lg text-apple-subtext max-w-2xl mx-auto">Driving 0-to-1 product lifecycles, global scale, and operational excellence.</p>
+                </div>
+
+                <div class="space-y-12">
+                    <!-- Motorola -->
+                    <div class="group flex flex-col md:flex-row gap-8 bg-apple-bg rounded-3xl p-8 md:p-10 fade-in-up transition-all duration-500 hover:shadow-xl hover:bg-gray-50 border border-transparent hover:border-gray-200">
+                        <div class="md:w-1/3 shrink-0">
+                            <h3 class="text-2xl font-bold text-apple-text mb-1">Motorola Solutions Inc</h3>
+                            <p class="text-apple-link font-medium mb-2">Product Manager</p>
+                            <p class="text-sm text-apple-subtext font-medium">Sep 2024 &ndash; Present</p>
+                            <p class="text-sm text-apple-subtext mt-1">NC (Remote)</p>
+                        </div>
+                        <div class="md:w-2/3 space-y-4 text-apple-text/80 text-base leading-relaxed">
+                            <ul class="list-none space-y-3">
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Spearheaded 0-to-1 lifecycle delivery for CommandCentral DEMS, scaling connected device management to 1,200+ public safety agencies.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Reduced tier-0 customer support resolution times by 45% org-wide by designing and launching an enterprise Generative AI LLM support agent.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Increased quarterly release velocity by 30% across 15 engineering squads through formalized CCB protocols and VOC-driven PRDs.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Recouped $4.5M in recurring ARR and secured an 88% migration rate by architecting a data-driven sunset framework.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 3rd Rock -->
+                    <div class="group flex flex-col md:flex-row gap-8 bg-apple-bg rounded-3xl p-8 md:p-10 fade-in-up transition-all duration-500 hover:shadow-xl hover:bg-gray-50 border border-transparent hover:border-gray-200">
+                        <div class="md:w-1/3 shrink-0">
+                            <h3 class="text-2xl font-bold text-apple-text mb-1">3rd Rock Essentials</h3>
+                            <p class="text-apple-link font-medium mb-2">Product Marketing Manager (PT)</p>
+                            <p class="text-sm text-apple-subtext font-medium">Oct 2022 &ndash; Sep 2024</p>
+                            <p class="text-sm text-apple-subtext mt-1">Durham, NC</p>
+                        </div>
+                        <div class="md:w-2/3 space-y-4 text-apple-text/80 text-base leading-relaxed">
+                            <ul class="list-none space-y-3">
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Accelerated new product adoption by 22% across 5 retail channels by executing multi-channel go-to-market strategies.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Decreased product stockouts by 28% while lifting repeat purchase rates by 18% using predictive inventory demand models.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Shortened executive decision-making cycles by 35% by engineering real-time KPI dashboards in Tableau and Excel.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- TCS (PO) -->
+                    <div class="group flex flex-col md:flex-row gap-8 bg-apple-bg rounded-3xl p-8 md:p-10 fade-in-up transition-all duration-500 hover:shadow-xl hover:bg-gray-50 border border-transparent hover:border-gray-200">
+                        <div class="md:w-1/3 shrink-0">
+                            <h3 class="text-2xl font-bold text-apple-text mb-1">TATA Consultancy Services</h3>
+                            <p class="text-apple-link font-medium mb-2">Product Owner</p>
+                            <p class="text-sm text-apple-subtext font-medium">Jul 2020 &ndash; Jan 2022</p>
+                            <p class="text-sm text-apple-subtext mt-1">Chennai, India</p>
+                        </div>
+                        <div class="md:w-2/3 space-y-4 text-apple-text/80 text-base leading-relaxed">
+                            <ul class="list-none space-y-3">
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Accelerated partner integration velocity by 3x and grew revenue by 13% by establishing an API-first microservices architecture.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Expanded user adoption by 25% across enterprise accounts via a product differentiation roadmap featuring advanced vehicle telemetry.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Secured $2.75M in engineering capital allocation by authoring data-backed business cases and Tableau financial models.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- TCS (Dev) -->
+                    <div class="group flex flex-col md:flex-row gap-8 bg-apple-bg rounded-3xl p-8 md:p-10 fade-in-up transition-all duration-500 hover:shadow-xl hover:bg-gray-50 border border-transparent hover:border-gray-200">
+                        <div class="md:w-1/3 shrink-0">
+                            <h3 class="text-2xl font-bold text-apple-text mb-1">TATA Consultancy Services</h3>
+                            <p class="text-apple-link font-medium mb-2">Product Development Engineer</p>
+                            <p class="text-sm text-apple-subtext font-medium">May 2019 &ndash; Jun 2020</p>
+                            <p class="text-sm text-apple-subtext mt-1">Chennai, India</p>
+                        </div>
+                        <div class="md:w-2/3 space-y-4 text-apple-text/80 text-base leading-relaxed">
+                            <ul class="list-none space-y-3">
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Cut issue resolution turnaround by 3,500 hours across 9 global squads by designing structured cross-functional bug triages.</li>
+                                <li class="relative pl-5 before:content-[''] before:absolute before:left-0 before:top-2 before:w-1.5 before:h-1.5 before:bg-gray-400 before:rounded-full">Eliminated 2,000 hours of manual operational reporting annually by engineering automated KPI telemetry dashboards in Tableau and SQL.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-24 bg-apple-bg px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center">
+                <div class="fade-in-up mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-apple-text mb-4">Core Competencies</h2>
+                    <p class="text-lg text-apple-subtext">Product strategy, analytics, and agile methodologies.</p>
+                </div>
+
+                <div class="flex flex-wrap justify-center gap-3 fade-in-up delay-100">
+                    <!-- Core Skills -->
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Product Strategy & Execution</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">0-to-1 Product Lifecycle</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Go-to-Market (GTM)</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Data Analytics</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">A/B Testing</span>
+                    
+                    <!-- Tools & Frameworks -->
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">SQL</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Tableau</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Jira & Aha!</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Figma</span>
+                    <span class="px-5 py-3 bg-white text-apple-text text-sm md:text-base font-medium rounded-full shadow-sm border border-gray-200/60 hover:scale-105 hover:shadow-md transition-all cursor-default">Agile/Scrum</span>
+                    
+                    <!-- Certifications -->
+                    <span class="px-5 py-3 bg-black text-white text-sm md:text-base font-medium rounded-full shadow-sm hover:scale-105 transition-all cursor-default">CSPO</span>
+                    <span class="px-5 py-3 bg-black text-white text-sm md:text-base font-medium rounded-full shadow-sm hover:scale-105 transition-all cursor-default">PMC Certified</span>
+                    <span class="px-5 py-3 bg-black text-white text-sm md:text-base font-medium rounded-full shadow-sm hover:scale-105 transition-all cursor-default">Lean Six Sigma Green Belt</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24 bg-white px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-apple-text mb-4">Education</h2>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-apple-bg rounded-3xl p-8 text-center md:text-left fade-in-up border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto md:mx-0 mb-6 border border-gray-100">
+                            <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-apple-text mb-2">Duke University</h3>
+                        <p class="text-apple-subtext mb-1">Pratt School of Engineering</p>
+                        <p class="text-black font-semibold mb-4">Master of Engineering Management</p>
+                        <div class="inline-block bg-gray-200/50 rounded-full px-3 py-1 text-xs font-medium text-gray-600">
+                            Aug 2022 &ndash; Dec 2023
+                        </div>
+                    </div>
+
+                    <div class="bg-apple-bg rounded-3xl p-8 text-center md:text-left fade-in-up delay-100 border border-gray-100 hover:shadow-lg transition-shadow duration-300">
+                        <div class="w-16 h-16 bg-white rounded-2xl shadow-sm flex items-center justify-center mx-auto md:mx-0 mb-6 border border-gray-100">
+                             <svg class="w-8 h-8 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m3-4h1m-1 4h1m-5 8h5"></path>
+                            </svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-apple-text mb-2">Pondicherry University</h3>
+                        <p class="text-apple-subtext mb-1">Pondicherry, India</p>
+                        <p class="text-black font-semibold mb-4">B.Tech in Electronics & Communication Eng.</p>
+                        <div class="inline-block bg-gray-200/50 rounded-full px-3 py-1 text-xs font-medium text-gray-600">
+                            Aug 2015 &ndash; May 2019
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements" class="py-24 bg-apple-bg px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-16 fade-in-up">
+                    <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-apple-text mb-4">Achievements</h2>
+                    <p class="text-lg text-apple-subtext">Recognized for innovation, leadership, and strategic thinking.</p>
+                </div>
+
+                <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 fade-in-up">
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-50 text-apple-link flex items-center justify-center mr-4 mt-0.5">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <div>
+                                <p class="text-lg font-semibold text-apple-text">Apple Women in Science & Engineering Fellowship</p>
+                                <p class="text-apple-subtext mt-1">Selected as 1 among 60 North American recipients for this prestigious fellowship.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-50 text-apple-link flex items-center justify-center mr-4 mt-0.5">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <div>
+                                <p class="text-lg font-semibold text-apple-text">Duke GenAI Hackathon &ndash; Top-4 Finish</p>
+                                <p class="text-apple-subtext mt-1">Led a 4-person team to build an AI wellness assistant in under 48 hours.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-50 text-apple-link flex items-center justify-center mr-4 mt-0.5">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <div>
+                                <p class="text-lg font-semibold text-apple-text">Duke Casing Hackathon &ndash; Runner-Up</p>
+                                <p class="text-apple-subtext mt-1">Awarded Runner-Up for devising a strategic market entry roadmap for a healthcare firm.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-50 text-apple-link flex items-center justify-center mr-4 mt-0.5">
+                                <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                            </span>
+                            <div>
+                                <p class="text-lg font-semibold text-apple-text">Statewide Youth Oratory Competition</p>
+                                <p class="text-apple-subtext mt-1">Secured Top-20 state-level rank out of 1,000+ candidates (2017, 2019).</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-20 bg-white border-t border-gray-200">
+        <div class="max-w-4xl mx-auto px-4 text-center fade-in-up">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-apple-text mb-8">Let's Connect.</h2>
+            
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mb-12">
+                <a href="mailto:shreepriyagopal.duke@gmail.com" class="text-apple-subtext hover:text-black transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                    shreepriyagopal.duke@gmail.com
+                </a>
+                <span class="hidden md:inline text-gray-300">|</span>
+                <a href="tel:9849449188" class="text-apple-subtext hover:text-black transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                    (984) 944-9188
+                </a>
+                <span class="hidden md:inline text-gray-300">|</span>
+                <a href="https://linkedin.com/in/shreepriya-gopal" target="_blank" rel="noopener noreferrer" class="text-apple-subtext hover:text-apple-link transition-colors flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+            </div>
+            
+            <p class="text-sm text-gray-400">
+                &copy; <span id="year"></span> Shreepriya Gopal. Designed with precision.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set dynamic year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle logic
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for fade-in-up animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: stop observing once animated to prevent re-triggering
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Target elements with fade-in-up class
+        document.querySelectorAll('.fade-in-up').forEach((elem) => {
+            observer.observe(elem);
+        });
+    </script>
+</body>
+</html>
